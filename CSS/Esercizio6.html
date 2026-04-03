@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 6 — Flexbox in Azione</title>
+    <style>
+        .container { display: flex;
+            background-color: rgb(23, 173, 81);
+         justify-content: center;
+         align-items: center;
+        }
+        .container div{background-color: brown;
+        margin: 10px;
+        padding: 40px;
+        font-size: 24px;
+        }
+        .container1 {display: flex;
+        background-color: blue;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+        .container1 div{background-color: aqua;
+        margin: 10px;
+        padding: 40px;
+        font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Esercizio 6 — Flexbox in Azione</h1>
+    <p>Trasforma un contenitore in una Flexbox con display: flex. Usa justify-content e align-items per allineare tre elementi in riga e centrarli perfettamente sia in orizzontale che in verticale.</p>
+    <div class="container">
+    <div>item1</div>
+    <div>item2</div>
+    <div>item3</div>
+    </div>
+    <div class="container1">
+    <div>item1</div>
+    <div>item2</div>
+    <div>item3</div>
+    </div>
+</body>
+</html>

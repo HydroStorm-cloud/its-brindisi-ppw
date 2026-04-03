@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 7 — La Prima CSS Grid</title>
+    <style>
+        .container{display: grid;
+            grid-template-areas: 
+            "header header"
+            "main content"
+            "footer footer";
+        grid-template-columns: 1fr 3fr;
+        gap: 15px;
+        background-color: blue;
+        }
+        .container div{
+            background-color: aqua;
+            padding: 4px;
+        }
+        .container div.header{
+            grid-area: header;
+            text-align: center;
+        }
+        .container div.main{
+            grid-area: main;
+            text-align: center;
+        }
+        .container div.content{
+grid-area: content;
+text-align: center;
+
+        }
+        .container div.footer{
+            grid-area: footer;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Esercizio 7 — La Prima CSS Grid</h1>
+    <p>Crea il tuo primo layout a griglia moderna. Imposta display: grid e costruisci un layout pulito a due colonne uguali per quattro elementi usando l'unità fr e la funzione repeat().</p>
+    <div class="container">
+<div class="header"><h1>Item1</h1></div>
+<div class="main"><a href="cacca">cacca</a></div>
+<div class="content"><p>mi sono cacato sopra</p></div>
+<div class="footer"><h3>caccaright</h3></div>
+    </div>
+</body>
+</html>

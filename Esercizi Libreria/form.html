@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form per la libreria</h1>
+    <form action="../Esercizi Libreria/libri.html">
+    <label for="libri">Inserisci il nome del libro</label><br>
+    <input type="text" id="libri" name="libri" value="libri" placeholder="PAUSA"/><br><br>
+    <label for="autore">Inserisci il nome dell'autore</label> <br>
+    <input type="text" id="autore" name="autore" value="autore" placeholder="Andrea Moccia"/> <br><br>
+    <label for="anno">Inserisci l'anno di pubblicazione</label> <br>
+    <input type="number"id="anno" name="anno" value="anno" placeholder="1998" /><br><br>
+    <label for="genere">Inserisci il genere del libro</label><br>
+    <select name="genere" id="genere" multiple>
+        <option value="horror">horror</option>
+        <option value="avventura">avventura</option>
+    </select><br><br>
+    <label for="lingua">Inserisci la lingua del libro
+    <select name="lingua" id="lingua">
+        <option value="Italiano">italiano</option>
+        <option value="Inglese">inglese</option>
+    </select><br><br>
+    <label for="myfile">Inserisci i file del libro</label> <br>
+    <input type="file" id="myfile" name="myfile"><br><br>
+    <input type="submit">
+    </form>
+</body>
+</html>
