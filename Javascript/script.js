@@ -1,0 +1,12 @@
+const titolo = "La montagna sei tu";
+const autore = "Brianna Wiest";
+let prezzo = 12.50;
+const urlCopertina = "https://m.media-amazon.com/images/I/316vxPbdrsL._SY445_SX342_ML2_.jpg";
+let stato = "In lettura";
+let voto = 4;
+console.log(titolo + " di " + autore + " - Stato: " + stato + " - Voto: " + voto + " /5 stelle ");
+document.getElementById("titolo-display").innerText = titolo;
+document.getElementById("autore-display").innerText = "di " + autore;
+document.getElementById("copertina").src = urlCopertina;
+document.getElementById("stato-display").innerText = "Stato: " + stato;
+document.getElementById("voto-display").innerText = "Voto: " + voto + "/5 ⭐";

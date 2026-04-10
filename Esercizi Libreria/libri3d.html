@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f5f5f5;
+            padding: 2rem;
+            color: #1a1a1a;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 500;
+            margin: 0 0 6px;
+        }
+
+        .subtitle {
+            font-size: 15px;
+            color: #666;
+            margin: 0 0 3rem;
+        }
+
+        /* ── Layout catalogo ── */
+        .catalog {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 56px;
+            justify-content: center;
+        }
+
+        /* ── Scena 3D ── */
+        .book-scene {
+            perspective: 900px;
+            width: 140px;
+            height: 200px;
+        }
+
+        .book {
+            width: 140px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: spin 7s linear infinite;
+        }
+
+        .book:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes spin {
+            from { transform: rotateY(0deg) rotateX(12deg); }
+            to   { transform: rotateY(360deg) rotateX(12deg); }
+        }
+
+        /* ── Facce del libro ── */
+        .face { position: absolute; }
+
+        .front {
+            width: 140px;
+            height: 200px;
+            transform: translateZ(18px);
+            border-radius: 2px 8px 8px 2px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+
+        .front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .front .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, transparent 55%);
+            border-radius: 2px 8px 8px 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 10px 8px;
+        }
+
+        .front .overlay .book-title-overlay {
+            font-size: 11px;
+            font-weight: 600;
+            color: #fff;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .front .overlay .book-author-overlay {
+            font-size: 10px;
+            color: rgba(255,255,255,0.75);
+            margin: 2px 0 0;
+        }
+
+        .back {
+            width: 140px;
+            height: 200px;
+            transform: rotateY(180deg) translateZ(18px);
+            border-radius: 8px 2px 2px 8px;
+            background: #f0ece6;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+
+        .back p {
+            font-size: 11px;
+            color: #555;
+            margin: 0;
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .badge {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+
+        .badge-no {
+            background: #fde8e8;
+            color: #b91c1c;
+        }
+
+        .badge-yes {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        .spine {
+            width: 36px;
+            height: 200px;
+            left: 140px;
+            transform: rotateY(90deg) translateZ(0);
+            transform-origin: left center;
+            background: repeating-linear-gradient(
+                to bottom,
+                #b5a48a 0px, #c8b89a 2px, #b5a48a 4px
+            );
+        }
+
+        .spine-left {
+            width: 36px;
+            height: 200px;
+            left: -36px;
+            transform: rotateY(-90deg) translateZ(0);
+            transform-origin: right center;
+            background: #a09070;
+        }
+
+        .top-face {
+            width: 140px;
+            height: 36px;
+            top: -36px;
+            transform: rotateX(90deg) translateZ(0);
+            transform-origin: bottom center;
+            background: repeating-linear-gradient(
+                to right, #e8ddd0 0px, #ddd0c0 1px, #e8ddd0 4px
+            );
+        }
+
+        .bottom-face {
+            width: 140px;
+            height: 36px;
+            bottom: -36px;
+            transform: rotateX(-90deg) translateZ(0);
+            transform-origin: top center;
+            background: #e8ddd0;
+        }
+
+        /* ── Info sotto il libro ── */
+        .book-info {
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .book-info .book-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 0 0 3px;
+        }
+
+        .book-info .book-author {
+            font-size: 13px;
+            color: #666;
+            margin: 0;
+        }
+
+        .hint {
+            text-align: center;
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Catalogo</h1>
+    <p class="subtitle">Qui, un elenco di libri disponibili per l'acquisto</p>
+
+    <div class="catalog">
+
+        <!-- Libro 1 -->
+        <div>
+            <div class="book-scene">
+                <div class="book">
+                    <div class="face front">
+                        <img src="../Immagini/Screenshot 2026-03-31 at 14-10-58 Pausa Libro 101 pillole di scienza e cultura per quando posi il telefono Moccia Andrea Amazon.it Libri.png" alt="Pausa Libro">
+                        <div class="overlay">
+                            <p class="book-title-overlay">Pausa Libro</p>
+                            <p class="book-author-overlay">Andrea Moccia</p>
+                        </div>
+                    </div>
+                    <div class="face back">
+                        <span class="badge badge-no">Non disponibile</span>
+                        <p>Andrea Moccia<br>Pausa Libro</p>
+                    </div>
+                    <div class="face spine"></div>
+                    <div class="face spine-left"></div>
+                    <div class="face top-face"></div>
+                    <div class="face bottom-face"></div>
+                </div>
+            </div>
+            <div class="book-info">
+                <p class="book-title">Pausa Libro</p>
+                <p class="book-author">Andrea Moccia</p>
+            </div>
+        </div>
+
+        <!-- Libro 2 -->
+        <div>
+            <div class="book-scene">
+                <div class="book" style="animation-delay: -2s;">
+                    <div class="face front">
+                        <img src="../Immagini/Screenshot 2026-03-31 at 15-20-54 Troppo vivo per restare fermo. Come vivere con l'ADHD Donato Luca Amazon.it Libri.png" alt="Troppo vivo per restare fermo">
+                        <div class="overlay">
+                            <p class="book-title-overlay">Troppo vivo per restare fermo</p>
+                            <p class="book-author-overlay">Luca Donato</p>
+                        </div>
+                    </div>
+                    <div class="face back">
+                        <span class="badge badge-yes">Disponibile</span>
+                        <p>Luca Donato<br>Troppo vivo per restare fermo</p>
+                    </div>
+                    <div class="face spine"></div>
+                    <div class="face spine-left"></div>
+                    <div class="face top-face"></div>
+                    <div class="face bottom-face"></div>
+                </div>
+            </div>
+            <div class="book-info">
+                <p class="book-title">Troppo vivo per restare fermo</p>
+                <p class="book-author">Luca Donato</p>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="hint">Passa il mouse su un libro per mettere in pausa la rotazione</p>
+
+</body>
+</html>
