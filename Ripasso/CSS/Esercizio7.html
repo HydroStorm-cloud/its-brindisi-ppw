@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizio 7 - CSS Grid</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 10px;
+      height: 200px;
+    }
+    .grid-container div {
+      background-color: rgb(89, 14, 211);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+    }
+    .elemento1 {
+        transition: background-color 2s ease;
+    }
+    .elemento1:hover {
+      background-color: rgb(27, 140, 175);
+    }
+     .elemento2 {
+        transition: background-color 2s ease;
+    }
+    .elemento2:hover {
+      background-color: rgb(27, 175, 34);
+    }
+     .elemento3 {
+        transition: background-color 2s ease;
+    }
+    .elemento3:hover {
+      background-color: rgb(181, 199, 23);
+    }
+     .elemento4 {
+        transition: background-color 2s ease;
+    }
+    .elemento4:hover {
+      background-color: rgb(175, 27, 27);
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="elemento1">Elemento 1</div>
+    <div class="elemento2">Elemento 2</div>
+    <div class="elemento3">Elemento 3</div>
+    <div class="elemento4">Elemento 4</div>
+  </div>
+</body>
+</html>
