@@ -6,9 +6,11 @@
 </head>
 <body>
     <h1>Form di Contatto in HTML</h1>
-    
+    <!-- il tag <form> viene utilizzato per creare un modulo di contatto, con l'attributo action che specifica l'URL a cui inviare i dati del modulo. -->
     <form action="#">
+        <!-- il tag <label> viene utilizzato per creare un'etichetta per un elemento del modulo-->
         <label for="name">Nome:</label><br>
+        <!-- il tag <input> viene utilizzato per creare un campo di input, con l'attributo type che specifica il tipo di input, id che identifica l'elemento, name che specifica il nome dell'elemento e required che indica che il campo è obbligatorio. -->
         <input type="text" id="name" name="name" required><br><br>
         
         <label for="email">Email:</label><br>
@@ -19,7 +21,7 @@
 
         <label for="passw">Password:</label><br>
         <input type="password" id="passw" name="passw" required><br><br>
-
+        <!-- il tag <input> viene utilizzato per creare un pulsante di invio, con l'attributo type che specifica il tipo di input e value che specifica il testo visualizzato sul pulsante. -->
         <input type="submit" value="Invia">
     </form>
 </body>

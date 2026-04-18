@@ -7,7 +7,16 @@
   <title>Esercizio 7 - Navbar Collassabile</title>
 </head>
 <body>
-  <!-- Aggiungi qui la navbar collassabile -->
+   <!-- si definisce una navbar collassabile utilizzando il framework Bootstrap. La navbar include un brand, un pulsante per il toggle della navbar su dispositivi mobili e una lista di link di navigazione. Il pulsante di toggle è configurato per mostrare o nascondere i link di navigazione quando viene cliccato, rendendo la navbar responsive e adatta a diversi dispositivi. Alla fine del corpo della pagina, viene incluso uno script per caricare il file JavaScript di Bootstrap, necessario per far funzionare correttamente i componenti interattivi di Bootstrap, come la navbar collassabile. -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Brand</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <!-- il tag <span> viene utilizzato per creare un'icona di toggle per la navbar su dispositivi mobili. La classe navbar-toggler-icon applica lo stile dell'icona di toggle predefinita di Bootstrap, che solitamente consiste in tre linee orizzontali (hamburger icon). Quando l'utente clicca su questo pulsante, la navbar si espande o si collassa, mostrando o nascondendo i link di navigazione contenuti nella sezione con l'id "navbarNav". -->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="#">Brand</a>
