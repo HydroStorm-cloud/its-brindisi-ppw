@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria XYZ</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+     <style>
+        body {
+            background-image: url(/its-brindisi-ppw/Ripasso/Libreria/366341.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            font-family: 'Rye', cursive;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+.book-cover {
+    width: 180px;         /* Larghezza fissa per ogni copertina */
+    height: 270px;        /* Altezza proporzionale (rapporto 2:3) */
+    object-fit: cover;    /* Evita distorsioni */
+    margin: 0 auto;       /* Centra l'immagine nella colonna */
+    transition: transform 0.3s; /* Effetto zoom al passaggio del mouse */
+}
+
+.book-cover:hover {
+    transform: scale(1.05); /* Leggero zoom come nel sito Andromeda */
+    cursor: pointer;
+}
+
+/* Rende le frecce del carosello più visibili sullo sfondo scuro */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+#bookCarousel {
+    /* Sfondo scuro semi-trasparente */
+    background-color: rgba(0, 0, 0, 0.6); 
+    
+    /* Arrotondiamo gli angoli del blocco carosello */
+    border-radius: 20px;
+    
+    /* Spazio interno così le immagini non toccano i bordi dello sfondo */
+    padding: 40px 0;
+    
+    /* Un bordo sottile per separarlo dal wallpaper generale */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* Effetto sfocatura anche per il blocco carosello (opzionale) */
+    backdrop-filter: blur(5px);
+    
+    /* Margini esterni per non farlo appiccicare ai tab sopra */
+    margin: 50px 15px; 
+}
+     </style>
+</head>
+<body>
+    <!-- navbar con logo circolare e testo a fianco -->
+<nav class="navbar bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <div class="rounded-circle border border-secondary" 
+           style="width: 60px; height: 60px; overflow: hidden; position: relative;">
+        <img src="/Gemini_Generated_Image_jy7596jy7596jy75.png" 
+             alt="Logo" 
+             style="width: 140%; height: 140%; object-fit: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      </div>
+      <span class="ms-3 h4 mb-0 text-white">Libreria XYZ</span>
+    </a>
+    <!-- pulsante collassabile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- link di navigazione collassabili -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ms-auto"> 
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link 3</a>
+        </li>    
+      </ul>
+    </div>
+</nav>
+<!-- tab con contenuti -->
+<div class="container-fluid bg-secondary">
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="tab" href="#menu1">Menu 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="tab" href="#menu2">Menu 2</a>
+    </li>
+  </ul>
+</div>
+<!-- contenuti delle tab -->
+<div class="tab-content">
+  <div id="home" class="container-fluid tab-pane active ps-3 text-light"><br>
+    <h1>Benvenuti nella nostra libreria XYZ</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+  </div>
+  
+  <div id="menu1" class="container-fluid tab-pane fade ps-3"><br>
+    <h3>Menu 1</h3>
+    <p>Ut enim ad minim veniam...</p>
+  </div>
+  
+  <div id="menu2" class="container-fluid tab-pane fade ps-3"><br>
+    <h3>Menu 2</h3>
+    <p>Sed ut perspiciatis unde omnis...</p>
+  </div>
+</div>
+
+<div id="bookCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-inner">
+    
+    <div class="carousel-item active">
+  <div class="container">
+    <div class="row text-center"> <div class="col-md-3 col-6">
+        <img src="/its-brindisi-ppw/Ripasso/Libreria/41fEIT+IOML._SY445_SX342_ML2_.jpg" 
+             class="rounded shadow book-cover" alt="Libro 1">
+             <p class="text-light mt-2 fw-bold small">Through mom's eyes</p>
+      </div>
+      
+      <div class="col-md-3 col-6">
+        <img src="/its-brindisi-ppw/Ripasso/Libreria/71YyYxRBWFL._SL1500_.jpg" class="rounded shadow book-cover" alt="Libro 2">
+        <p class="text-light mt-2 fw-bold small">Burn of the everflame</p>
+      </div>
+      
+      <div class="col-md-3 d-none d-md-block">
+        <img src="/its-brindisi-ppw/Ripasso/Libreria/81OOBKJ1vHL._SL1500_.jpg" class="rounded shadow book-cover" alt="Libro 3">
+        <p class="text-light mt-2 fw-bold small">The beekeeper's apprentice</p>
+      </div>
+      
+      <div class="col-md-3 d-none d-md-block">
+        <img src="/its-brindisi-ppw/Ripasso/Libreria/91f-93IWQFL._SL1500_.jpg" class="rounded shadow book-cover" alt="Libro 4">
+        <p class="text-light mt-2 fw-bold small">The missing ones</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row text-center"> <div class="col-md-3 col-6">
+            <img src="/its-brindisi-ppw/Ripasso/Libreria/81Xeqc89NcL._SL1500_.jpg" class="rounded shadow book-cover" alt="Libro 5">
+            <p class="text-light mt-2 fw-bold small">Inferno</p>
+          </div>
+          <div class="col-md-3 col-6">
+            <img src="/its-brindisi-ppw/Ripasso/Libreria/91pSaVjfShL._SL1500_.jpg" class="rounded shadow book-cover" alt="Libro 6">
+            <p class="text-light mt-2 fw-bold small">Rites of the starling</p>
+
+          </div>
+          <div class="col-md-3 d-none d-md-block">
+            <img src="/its-brindisi-ppw/Ripasso/Libreria/91xvzumCfRL._SL1500_.jpg" class="rounded shadow book-cover" alt="Libro 7">
+            <p class="text-light mt-2 fw-bold small">STAR WARS: Heir to the empire</p>
+          </div>
+          <div class="col-md-3 d-none d-md-block">
+            <img src="/its-brindisi-ppw/Ripasso/Libreria/81i3Q7EftzL._SL1500_.jpg" class="rounded shadow book-cover" alt="Libro 8">
+            <p class="text-light mt-2 fw-bold small">Between Sisters</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#bookCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#bookCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+  
+<div class="container-fluid mt-3"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
