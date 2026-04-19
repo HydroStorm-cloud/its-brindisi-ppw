@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(/its-brindisi-ppw/Ripasso/Libreria/366341.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .glass-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .text-center {
+            color: rgb(5, 5, 5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="Libreria.html">
+      <div class="rounded-circle border border-secondary" 
+           style="width: 60px; height: 60px; overflow: hidden; position: relative;">
+        <img src="/Gemini_Generated_Image_jy7596jy7596jy75.png" 
+             alt="Logo" 
+             style="width: 140%; height: 140%; object-fit: cover; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      </div>
+      <span class="ms-3 h4 mb-0 text-white">Libreria XYZ</span>
+    </a>
+    <!-- pulsante collassabile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- link di navigazione collassabili -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ms-auto"> 
+        <li class="nav-item">
+          <a class="nav-link" href="libri.html">Catalogo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Login.html">Accedi</a>
+        </li>    
+      </ul>
+    </div>
+</nav>
+
+
+    <div class="container mt-5">
+    <div class="glass-form p-4"> <h2 class="text-center mb-4">Aggiungi Nuovo Libro al Catalogo</h2>
+        
+        <form action="salva_libro.php" method="POST" enctype="multipart/form-data">
+            
+            <div class="mb-3">
+                <label class="form-label">Nome Libro</label>
+                <input type="text" class="form-control" placeholder="Inserisci il titolo">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Autore</label>
+                <input type="text" class="form-control" placeholder="Nome dell'autore">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Anno di Pubblicazione</label>
+                <input type="number" class="form-control" min="1000" max="2026">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Genere (Tieni premuto Ctrl per scegliere più di uno)</label>
+                <select class="form-select" multiple>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="horror">Horror</option>
+                    <option value="storico">Storico</option>
+                    <option value="avventura">Avventura</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Lingua originale</label>
+                <select class="form-select">
+                    <option selected>Scegli la lingua...</option>
+                    <option value="it">Italiano</option>
+                    <option value="en">Inglese</option>
+                    <option value="fr">Francese</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Carica Copertina</label>
+                <input type="file" class="form-control" accept="image/*">
+            </div>
+
+            <button type="submit" class="btn btn-info w-100">Aggiungi alla Libreria</button>
+        </form>
+    </div>
+</div>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
