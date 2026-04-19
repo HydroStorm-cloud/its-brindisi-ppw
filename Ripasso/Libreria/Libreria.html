@@ -6,6 +6,8 @@
     <title>Libreria XYZ</title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+
      <style>
         body {
             background-image: url(/its-brindisi-ppw/Ripasso/Libreria/366341.jpg);
@@ -18,6 +20,11 @@
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
+        #phome {
+            font-family: "Chango", sans-serif;
+            color: #ddd;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
 .book-cover {
     width: 180px;         /* Larghezza fissa per ogni copertina */
     height: 270px;        /* Altezza proporzionale (rapporto 2:3) */
@@ -27,7 +34,7 @@
 }
 
 .book-cover:hover {
-    transform: scale(1.05); /* Leggero zoom come nel sito Andromeda */
+    transform: scale(1.05); /* Leggero zoom*/
     cursor: pointer;
 }
 
@@ -58,7 +65,7 @@
 </head>
 <body>
     <!-- navbar con logo circolare e testo a fianco -->
-<nav class="navbar bg-dark navbar-dark">
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="#">
       <div class="rounded-circle border border-secondary" 
@@ -77,55 +84,35 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav ms-auto"> 
         <li class="nav-item">
-          <a class="nav-link" href="#">Link 1</a>
+          <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link 2</a>
+          <a class="nav-link" href="#">Catalogo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link 3</a>
+          <a class="nav-link" href="Login.html">Accedi</a>
         </li>    
       </ul>
     </div>
 </nav>
-<!-- tab con contenuti -->
-<div class="container-fluid bg-secondary">
-  <ul class="nav nav-tabs" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="tab" href="#menu1">Menu 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-bs-toggle="tab" href="#menu2">Menu 2</a>
-    </li>
-  </ul>
-</div>
+
+
 <!-- contenuti delle tab -->
-<div class="tab-content">
+<div class="tab-content p-4 rounded-4 shadow" style="background: rgba(0,0,0,0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1);">
   <div id="home" class="container-fluid tab-pane active ps-3 text-light"><br>
     <h1>Benvenuti nella nostra libreria XYZ</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    <p id="phome">Un rifugio senza tempo dove il profumo della carta antica si intreccia con il calore del legno intagliato. Tra i nostri scaffali, che si innalzano verso soffitti a volta illuminati da vetrate istoriate, ogni volume è un portale verso mondi inesplorati. Non siamo una semplice rivendita di libri, ma un crocevia per sognatori e avventurieri della mente: dalle saghe fantasy più epiche ai classici che hanno segnato la storia, ogni angolo della nostra libreria è pensato per accogliervi in un'atmosfera magica e sospesa. Che siate alla ricerca di un antico grimorio o dell'ultima novità editoriale, qui troverete il vostro spazio tra luci soffuse, scale a chiocciola e il silenzio rigenerante di mille storie pronte a essere scoperte.</p>
   </div>
-  
-  <div id="menu1" class="container-fluid tab-pane fade ps-3"><br>
-    <h3>Menu 1</h3>
-    <p>Ut enim ad minim veniam...</p>
   </div>
-  
-  <div id="menu2" class="container-fluid tab-pane fade ps-3"><br>
-    <h3>Menu 2</h3>
-    <p>Sed ut perspiciatis unde omnis...</p>
-  </div>
-</div>
+ 
 
 <div id="bookCarousel" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-interval="3000">
-  <div class="carousel-inner">
+ <div class="carousel-inner">
     
     <div class="carousel-item active">
   <div class="container">
-    <div class="row text-center"> <div class="col-md-3 col-6">
+    <div class="row text-center"> 
+      <div class="col-md-3 col-6">
         <img src="/its-brindisi-ppw/Ripasso/Libreria/41fEIT+IOML._SY445_SX342_ML2_.jpg" 
              class="rounded shadow book-cover" alt="Libro 1">
              <p class="text-light mt-2 fw-bold small">Through mom's eyes</p>
@@ -182,7 +169,18 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
   </button>
 </div>
-  
+ 
+<footer>
+  <div class="mt-5 p-3 text-light text-center" style="background: rgba(0,0,0,0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1);">
+    <h5>Orari di apertura:</h5>
+    <ul class="list-unstyled">
+        <li>Lun - Ven: 09:00 - 19:30</li>
+        <li>Sab: 10:00 - 21:00 (Letture notturne)</li>
+        <li>Dom: Chiuso per riposo degli elfi</li>
+    </ul>
+</div>
+</footer>
+
 <div class="container-fluid mt-3"></div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
