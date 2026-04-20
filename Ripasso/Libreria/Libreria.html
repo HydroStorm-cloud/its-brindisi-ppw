@@ -15,6 +15,27 @@
             background-attachment: fixed;
         }
 
+        /* Stile specifico per la ricerca nella navbar (sovrascrive lo stile del form) */
+.navbar .form-control {
+    background: white !important;
+    color: #333 !important;
+    border: 1px solid #ccc !important;
+}
+
+.navbar .form-control::placeholder {
+    color: #888 !important;
+}
+
+/* Quando la luce è accesa, manteniamo la coerenza */
+body.light .navbar .form-control {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid #999 !important;
+}
+
+        #collapsibleNavbar{
+          text-align: center;
+        }
+
         h1 {
             font-family: 'Rye', cursive;
             color: #fff;
@@ -195,15 +216,20 @@ body.light footer div {
     </button>
     <!-- link di navigazione collassabili -->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <ul class="navbar-nav ms-auto"> 
-        <li class="nav-item">
-          <a class="nav-link" href="libri.html">Catalogo</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Login.html">Accedi</a>
-        </li>    
-      </ul>
-    </div>
+  <ul class="navbar-nav mx-auto mb-2 mb-lg-0"> 
+    <li class="nav-item">
+      <a class="nav-link" href="libri.html">Catalogo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Login.html">Accedi</a>
+    </li>    
+  </ul>
+  
+  <form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Cerca il tuo libro">
+    <button class="btn btn-outline-info" type="submit">Cerca</button>
+  </form>
+</div>
 </nav>
 
 
