@@ -1,6 +1,7 @@
-/*Sfondo e colori */
+/*Sfondo*/
 body {
     background-image: url("../Libreria Pura/Immagini per libreria/Sfondo libreria.jpg");
+    background-size: cover;
 }
 
 /* Immagine decorativa */
@@ -8,9 +9,64 @@ body {
     border-radius: 20px;
 }
 
+/* Header */
 #header {
     padding: 20px;
     border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 400px;
+    margin: auto;
+}
+
+/* Sezione */
+#sezione {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+/* Form */
+#form {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 400px;
+}
+
+/* Carosello */
+.pellicola {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.pellicola-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 45s linear infinite;
+}
+
+.pellicola-track img {
+    width: 120px;
+    height: 160px;
+    margin: 0 25px; 
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Sposta esattamente della metà del totale */
 }
 
 /* Catalogo dei libri */
