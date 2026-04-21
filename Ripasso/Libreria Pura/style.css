@@ -1,0 +1,40 @@
+/*Sfondo e colori */
+body {
+    background-image: url("../Libreria Pura/Immagini per libreria/Sfondo libreria.jpg");
+}
+
+/* Immagine decorativa */
+#img-decorativa {
+    border-radius: 20px;
+}
+
+#header {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Catalogo dei libri */
+
+.copertina {
+    width: 180px;         
+    height: 270px;        
+    object-fit: cover;    ;       
+    transition: transform 0.3s;
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.copertina:hover {
+    transform: scale(1.05);
+    border: 2px solid #fff;
+}
+
+#catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
