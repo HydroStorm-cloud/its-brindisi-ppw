@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="toast" class="nascosto"></div>
+
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
@@ -27,6 +30,9 @@
             <button class="btn btn-outline-light">Catalogo</button>
           </a>
         </li>
+        <li class="nav-item mt-1">
+          <button id="btn-dark-mode">Spegni la luce</button>
+        </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="text" placeholder="Search">
@@ -37,6 +43,7 @@
 </nav>
 
        <!-- Catalogo dei libri -->
+
     <div id="catalogo" class="container mt-4">
     <div class="row">
         
@@ -94,8 +101,8 @@
       <input type="text" id="autore" name="autore" class="form-control" placeholder="Emily Brontè"/>
     </div>
     <div class="mb-3">
-      <label for="anno">Inserisci l'anno di pubblicazione:</label>
-      <input type="number"id="anno" name="anno" class="form-control" placeholder="1998" />
+      <label for="anno">Inserisci il prezzo:</label>
+      <input type="number"id="prezzo" name="prezzo" class="form-control" placeholder="20€" />
      </div>
      <div class="mb-3">
     <label for="genere">Inserisci il genere del libro:</label>
@@ -119,14 +126,31 @@
   </form>
 </div>
     <button class="btn btn-secondary" type="button">Conferma la tua scelta</button>
+    <button id="btn-svuota" class="btn btn-danger mt-2 w-100" type="button">Svuota intera libreria</button>
   </div>
 </div>
 
+
+
 <div class="container-fluid mt-3 mb-3">
-  <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#aggiungiLibro">
+  <button class="btn btn-secondary mb-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#aggiungiLibro" >
     Non trovi il tuo libro? Aggiungilo qui!
   </button>
+
+  <!-- Modulo 4 js -->
+<h1 class="col-md-3 col-6 mb-4" id="hlibri">La tua Libreria</h1>
+<h3 id="pannello-statistiche"></h3> 
+<div id="griglia-libri"></div> <br> 
+<div class="container mt-3">
+    <div class="input-group mb-3" style="max-width: 500px;">
+        <input type="text" id="input-ricerca" class="form-control" placeholder="Cerca su internet...">
+        <button id="btn-cerca" class="btn btn-primary" type="button">Cerca nel Mondo</button>
+    </div>
+    <span id="testo-caricamento" class="nascosto badge bg-warning text-dark">⏳ Sto cercando...</span>
 </div>
+</div>
+
+
 
 
     <script src="script.js"></script>

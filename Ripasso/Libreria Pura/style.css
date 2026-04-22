@@ -94,3 +94,82 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
 }
+
+/* modulo 4 js */
+#hlibri, #pannello-statistiche, #griglia-libri {
+    color: #fff;
+}
+
+#griglia-libri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* La singola card del libro */
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  color: #333; /* Colore testo scuro */
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+/* Stile per la Dark Mode */
+body.dark {
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../Libreria Pura/Immagini per libreria/Sfondo libreria.jpg");
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark #header, 
+body.dark #sezione, 
+body.dark #form, 
+body.dark #catalogo {
+    background-color: rgba(0, 0, 0, 0.9); 
+    border: 1px solid #333; 
+}
+
+body.dark .card {
+    background-color: #1e1e1e !important; /* Grigio molto scuro */
+    color: #ffffff !important;
+    border-color: #444;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+body.dark .card h3 {
+    color: #bb86fc; /* Un colore d'accento (opzionale, es. viola chiaro) */
+}
+
+body.dark .card p {
+    color: #ccc;
+}
+
+#btn-dark-mode {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: white;
+    transition: 0.3s;
+}
+
+body.dark #btn-dark-mode {
+    background-color: #eee;
+    color: #333;
+}
+
+.nascosto {
+    display: none;
+}
